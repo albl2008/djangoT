@@ -1,0 +1,23 @@
+<div>
+    <h1>Numeros ingresados</h1>
+</div>
+
+{% for number in numbers %}
+    <div>
+        <h2>{{ number.number }}</h2>
+    </div>
+{% endfor %}
+
+{% if messages %}
+    {% for msg in messages %}
+    <p>{{msg}}</p>
+    {% endfor %}
+{% endif %}
+<form action="newnumber/add/" method="post">
+    {% csrf_token %}    
+
+    <th>Nuevo numero:</th>
+    <input type="number" name="number">
+    <button type="submit"> Probar </button>
+
+</form>
