@@ -1,0 +1,11 @@
+<div>
+    <h1>My Blog</h1>
+</div>
+
+{% for post in all_posts %}
+    <div>
+        <h2>Titulo: {{ post.title }}</h2>
+        <p>Publicado el: {{ post.publish_date }}</p>
+        <p>{{ post.text }}</p>
+    </div>
+{% endfor %}

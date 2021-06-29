@@ -19,3 +19,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+# DJANGO ORM (crea tablas de db y realiza las migraciones. permite accer a los registros de la db) and Querysets(te permite acceder a la db a traves de codigo python)
+# django shell (para trabajar con ORM)
+# all objects
+# create object  
