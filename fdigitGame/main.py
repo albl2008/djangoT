@@ -6,7 +6,7 @@ import time
 list=[0,1,2,3,4,5,6,7,8,9]
 intentos = 1
 number=[]
-while (True):
+while (True):   
     try:
         while (len(set(number))!=4):
             numbers = input("Ingrese un numero de 4 cifras donde no se repite ningun cifra: ")

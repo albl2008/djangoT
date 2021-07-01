@@ -1,5 +1,5 @@
-from generateNumber import genNum
-from deleteNumber import delNum
+from .generateNumber import genNum
+from .deleteNumber import delNum
 
 
 
