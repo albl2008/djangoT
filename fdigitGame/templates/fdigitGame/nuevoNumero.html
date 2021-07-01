@@ -1,13 +1,5 @@
-<div>
-    <h1>Numeros ingresados:</h1>
-</div>
 
-{% for number in numbers %}
-    <div>
-        <h2>{{ number.number }}</h2>
-    </div>
-{% endfor %}
-
+<h3>Numero a adivinar: {{ultimoN.numberR}}</h3>
 {% if messages %}
     {% for msg in messages %}
     <p>{{msg}}</p>
@@ -22,13 +14,17 @@
 
 </form>
 <form action="generate" method="get">
-    <button type="submit"> Generar </button>
-    <p>{{guess}}</p>
+    <button type="submit"> Generar otro </button>
+    <h3>Empezar con: {{guess.intento}}</h3>
 </form>
+
 <form action="check" method="POST">
     {% csrf_token %}
-    <input type="number" name="guess" value="">
-    <input type="number" name="number" value="">
+    
     <button type="submit"> Comparar </button>
-    <p>{{guess.intento}} y {{number.number}} en {{intentos}}</p> 
+    <p>Numeros Generados:</p>
+    {% for try in tryings %}
+    <p>{{try.intento}}</p>
+    {% endfor %}
+    <p>Se adivino el numero: {{ultimoN.numberR }} {{number.numberR}} en {{intentos}} intentos</p> 
 </form>

@@ -10,7 +10,7 @@ class askNew:
         self.answer=answer
         self.guess=guess
 
-    def newNumber(self):
+    def nuevoNumero(self):
 
         if self.answer[0]==0 and self.answer[1]==0:
             list = delNum(self.answer[7])
