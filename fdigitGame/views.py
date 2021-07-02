@@ -6,6 +6,11 @@ from .generateNumber import genNum
 from .check import checkGuess
 from .askNewNumber import askNew
 # Create your views here.
+
+def home(request):
+    
+    return render(request,'fdigitGame/nuevoNumero.html',{})
+
 def add(request):
 
     ultimoN = Newnumber.objects.last()
@@ -73,4 +78,4 @@ def check(request):
                 newGuess=askNew(answer,guesslist)
                 nuevoNumber = newGuess.nuevoNumero()
 
-    return render(request,'fdigitGame/nuevoNumero.html',{'guess':guess ,'tryings':Guess.objects.all()[total-intentos:total:1], 'number':Newnumber.objects.last(), 'intentos':intentos})
+    return render(request,'fdigitGame/nuevoNumero.html',{'guess':guess ,'tryings':Guess.objects.all()[total-intentos:total:1], 'ultimoN':Newnumber.objects.last(), 'intentos':intentos})
